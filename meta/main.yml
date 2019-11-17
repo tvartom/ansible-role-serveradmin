@@ -35,7 +35,7 @@ galaxy_info:
     #       Maximum 20 tags per role.
 
 dependencies:
-    - name: tvartom.serveradmin
-      src: https://github.com/tvartom/ansible-role-serveradmin
+    - name: tvartom.gather_facts
+      src: https://github.com/tvartom/ansible-role-gather_facts
       scm: git
       # version: "v1.0" # Omit for latest version.
