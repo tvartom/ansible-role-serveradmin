@@ -1,6 +1,19 @@
 ---
 - include_role:
     name: tvartom.gather_facts
+
+- name: Gather facts
+  include_role:
+    name: ansible-role-gather_facts
+  vars:
+    facts_options:
+      var_files: [] # Read variables from files in var/[item].yml
+      #  - system
+      #  - webinstances
+      #  - users
+      host_vars_from_host: true
+      diskspace_message: false
+
 - include_role:
     name: tvartom.basic_centos_tools
 - include_role:
