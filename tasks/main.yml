@@ -1,0 +1,17 @@
+---
+- include_role:
+    name: tvartom.gather_facts
+- include_role:
+    name: tvartom.basic_centos_tools
+- include_role:
+    name: tvartom.users
+- include_role:
+    name: basic_centos_tools
+- include_role:
+    name: mariadb
+- include_role:
+    name: git
+- include_role:
+    name: google_cloud_sdk
+- include_role:
+    name: serveradmin

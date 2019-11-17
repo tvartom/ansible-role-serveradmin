@@ -1,0 +1,21 @@
+---
+- import_playbook: facts_gather.yml
+
+- hosts: "{{ target }}"
+  connection: "{{ connection_type | default('ssh', true) }}"
+  gather_facts: no
+  tasks:
+    - include_role:
+        name: basic
+    - include_role:
+        name: main_users
+    - include_role:
+        name: basic_centos_tools
+    - include_role:
+        name: mariadb
+    - include_role:
+        name: git
+    - include_role:
+        name: google_cloud_sdk
+    - include_role:
+        name: serveradmin
